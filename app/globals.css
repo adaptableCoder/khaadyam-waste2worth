@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes neon-glow {
+    0% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; color: #ff00ff; } /* Neon Pink */
+    25% { text-shadow: 0 0 15px #c300ff, 0 0 25px #c300ff; color: #c300ff; } /* Purple */
+    50% { text-shadow: 0 0 20px #8000ff, 0 0 30px #8000ff; color: #8000ff; } /* Deep Blue */
+    75% { text-shadow: 0 0 15px #00aaff, 0 0 25px #00aaff; color: #00aaff; } /* Light Blue */
+    100% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; color: #ff00ff; } /* Back to Neon Pink */
+  }
+
+  .animate-neon {
+    animation: neon-glow 3.5s infinite alternate ease-in-out;
+  }
+
+  .glowGreen {
+    text-shadow: 0 0 20px #80ff00;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-pulse {
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

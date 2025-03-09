@@ -1,0 +1,66 @@
+.btn-1 {
+  display: block;
+  cursor: pointer;
+  color: black;
+  margin: 0 auto;
+  width: 10rem;
+  white-space: nowrap;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 0.125rem;
+  isolation: isolate;
+}
+
+.btn-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(
+    115deg,
+    #4fcf70,
+    #fad648,
+    #a767e5,
+    #12bcfe,
+    #44ce7b
+  );
+  background-size: 25% 100%;
+  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop
+    2s linear infinite;
+  animation-play-state: paused;
+  translate: -5% 0%;
+  transition: translate 0.25s ease-out, opacity 0.175s ease-out;
+}
+
+.btn-1::before {
+  opacity: 1;
+  animation-play-state: running;
+  transition-duration: 1s;
+  translate: 0% 0%;
+}
+
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+.btn-1 span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  height: 100%;
+  text-align: center;
+}
+.btn-1 span:hover{
+  color: greenyellow;
+}
