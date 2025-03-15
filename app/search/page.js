@@ -4,7 +4,7 @@ import '../globals.css'
 import Button_colorful from '@/components/Button_colorful'
 import Output from '@/components/Output'
 
-const page = () => {
+const Search = () => {
   const [form, setForm] = useState({location: '', quantity: '', foodItem: ''})
   const [responseMessage, setResponseMessage] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -122,4 +122,4 @@ const page = () => {
   );
 }
 
-export default page
+export default Search

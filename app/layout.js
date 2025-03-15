@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from 'next/script';
 
 export const metadata = {
   title: "खाद्यम् - waste2worth",
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
           {children}
         </div>
         <Footer/>
-        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <Script src="https://cdn.lordicon.com/lordicon.js" strategy="lazyOnload" />
       </body>
     </html>
   );

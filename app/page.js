@@ -8,6 +8,7 @@ import TypewriterEffect from '@/components/TypingAnimation'
 import Link from 'next/link'
 import { Link as ScrollLink } from 'react-scroll'
 import Card from '../components/Card'
+import Image from 'next/image'
 
 export default function Home() {
   const [Loading, setLoading] = useState(true)
@@ -69,7 +70,7 @@ export default function Home() {
     <> 
       <div className="banner w-[100%] h-[100vh] bg-cover bg-center bg-[url('./banner.jpg')]" id="home">
         <div className="overlay h-[100%] w-[100%] bg-black/40 flex flex-col justify-center items-center">
-          <img src="/veggie.gif" className="h-[20%] lg:h-[40%] w-auto max-w-[40%]"/>
+          <Image src="/veggie.gif" alt="veggie" className="h-[20%] lg:h-[40%] w-auto max-w-[40%]"/>
           <div className="md:h-[10%] lg:h-[15%] w-[85%] flex justify-center items-end" key={WordIndex}>
             <TypewriterEffect 
               words={[words[WordIndex]]}
@@ -252,7 +253,7 @@ export default function Home() {
       </div>
 
       <div className="w-[100%] h-auto min-h-[50vh] flex justify-center items-center text-me-one" id="contribution">
-        <div className="lg:w-[60%] w-[98%] h-[1005] p-5 flex flex-col justify-center items-center">
+        <div className="lg:w-[60%] w-[98%] h-[100%] p-5 flex flex-col justify-center items-center">
           <div className="w-[100%] text-center text-[2.5rem] mb-8 font-bold text-[#008000] glowGreen">Why Your Contribution Matters</div>
           <div className="text-2xl my-3 text-center">Every donation you make creates a ripple effect:</div>
           <ul className="text-xl text-center">
