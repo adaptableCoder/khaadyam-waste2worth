@@ -36,9 +36,6 @@
   animation-play-state: paused;
   translate: -5% 0%;
   transition: translate 0.25s ease-out, opacity 0.175s ease-out;
-}
-
-.btn-1::before {
   opacity: 1;
   animation-play-state: running;
   transition-duration: 1s;
@@ -62,5 +59,37 @@
   text-align: center;
 }
 .btn-1 span:hover{
-  color: greenyellow;
+  color: #adff2f;
+}
+
+.btn-1 span.disabled:hover {
+  color: white;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 80%; /* Use relative width */
+  max-width: 12.5rem; /* Set a maximum width in rem */
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.75rem; /* Increased border radius in rem */
+  padding: 1rem; /* Use relative padding in rem */
+  position: absolute;
+  z-index: 1;
+  bottom: 150%; /* Adjusted position for responsiveness */
+  left: 50%;
+  transform: translateX(-50%); /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 0.7;
 }

@@ -1,7 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@font-face {
+  font-family: 'Text Me One';
+  src: url('/TextMeOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Kalam';
+  src: url('/Kalam-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @layer utilities {
   @keyframes neon-glow {
     0% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; color: #ff00ff; } /* Neon Pink */
@@ -17,6 +27,15 @@
 
   .glowGreen {
     text-shadow: 0 0 20px #80ff00;
+  }
+  .glow {
+    box-shadow: 0 0 30px 5px #91ff00;
+  }
+  .glowLight {
+    box-shadow: 0 0 8px 3px #91ff00;
+  }
+  .glowDark {
+    box-shadow: 0 0 20px 5px #008000;
   }
 }
 
@@ -37,4 +56,13 @@ body {
   50% {
     opacity: 0.5;
   }
+}
+
+/*Fonts*/
+.text-me-one {
+  font-family: 'Text Me One', sans-serif;
+}
+
+.kalam {
+  font-family: 'Kalam', sans-serif;
 }

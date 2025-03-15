@@ -1,3 +1,4 @@
+import React from "react"; // Added import statement
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
@@ -39,23 +40,37 @@ const TypewriterEffect = ({ words, className, cursorClassName }) => {
     }
   }, [isInView]);
 
-  const renderWords = () => (
-    <motion.div ref={scope} className="inline">
-      {wordsArray.map((word, idx) => (
-        <div key={`word-${idx}`} className="inline-block">
-          {word.text.map((char, index) => (
-            <motion.span
-              initial={{}}
-              key={`char-${index}`}
-              className={`opacity-0 hidden text-white ${word.className}`}>{/*animate-pulse*/ }
-              {char}
-            </motion.span>
-          ))}
-          &nbsp;
-        </div>
-      ))}
-    </motion.div>
-  );
+  const renderWords = () => {
+    let spaceCount = 0;
+    return (
+      <motion.div ref={scope} className="inline">
+        {wordsArray.map((word, idx) => (
+          <div key={`word-${idx}`} className="inline-block">
+            {word.text.map((char, index) => {
+              if (char === "\u00A0") spaceCount++;
+              const spanElement = (
+                <motion.span
+                  initial={{}}
+                  key={`char-${idx}-${index}`} // Updated key to be unique
+                  className={`opacity-0 hidden text-white ${word.className}`}>{char}
+                </motion.span>
+              );
+              if (spaceCount >= 3) {
+                spaceCount = 0;
+                return (
+                  <React.Fragment key={`fragment-${idx}-${index}`}>{/* Added unique key */}
+                    {spanElement}
+                    <br className="block md:hidden" />
+                  </React.Fragment>
+                );
+              }
+              return spanElement;
+            })}
+          </div>
+        ))}
+      </motion.div>
+    );
+  };
 
   return (
     <div className={`text-center text-white ${className}`}>
@@ -63,7 +78,7 @@ const TypewriterEffect = ({ words, className, cursorClassName }) => {
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 0.75, repeat: Infinity, repeatType: "reverse" }}
         className={`inline-block rounded-sm w-[4px] bg-white ${cursorClassName}`}
       ></motion.span>
     </div>

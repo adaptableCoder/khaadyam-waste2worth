@@ -1,0 +1,46 @@
+.button {
+    border: 0;
+    width: 3.125rem; /* 50px to rem */
+    height: 3.125rem; /* 50px to rem */
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    overflow: hidden;
+    transition: 0.175s;
+}
+
+.burger-5 {
+    height: 3.125rem; /* 50px to rem */
+}
+  
+.burger-5 svg {
+    /* The size of the SVG defines the overall size */
+    height: 3.125rem; /* 50px to rem */
+    transform: translate(-0.0625rem, -0.0625rem); /* -1px to rem */
+    /* Define the transition for transforming the SVG */
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+  
+.burger-5 .line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 0.109375rem; /* 1.75px to rem */
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-5 .line-top-bottom {
+    stroke-dasharray: 0.75rem 3.9375rem; /* 12px 63px to rem */
+}
+
+.is-closed.burger-5 svg {
+    transform: rotate(-45deg) translate(0);
+}
+
+.is-closed.burger-5 svg .line-top-bottom {
+    stroke-dasharray: 1.25rem 18.75rem; /* 20px 300px to rem */
+    stroke-dashoffset: -2.02625rem; /* -32.42px to rem */
+}

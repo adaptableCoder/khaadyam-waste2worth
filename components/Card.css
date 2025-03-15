@@ -1,0 +1,15 @@
+.card {
+    box-shadow: 0 4px 12px green;
+    transition: background-color 0.7s ease;
+    transition: transform 0.7s ease;
+}
+.card:hover {
+    transform: translateY(7px);
+    box-shadow: 0 8px 14px rgba(102, 253, 1, 0.7);
+}
+.card:hover .heading{
+    color: #adff2f;
+}
+.card:hover .hover\:colors-primary-white {
+    --lord-icon-primary: #fff;
+}
