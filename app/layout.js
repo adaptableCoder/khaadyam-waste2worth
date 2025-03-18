@@ -6,9 +6,7 @@ import Script from 'next/script';
 export const metadata = {
   title: "खाद्यम् - waste2worth",
   description: "A website to help locate nearby food donation sites using AI",
-  manifest: "/manifest.json",
-  icons: "/favicon.png",
-  fav: "/favicon.png",
+  manifest: "/manifest.json"
 };
 
 export default function RootLayout({ children }) {

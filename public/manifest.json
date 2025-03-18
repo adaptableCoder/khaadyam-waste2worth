@@ -3,10 +3,4 @@
     "short_name": "खाद्यम्",
     "start_url": "/",
     "display": "standalone",
-    "icons": [
-        {
-            "src": "favicon.png",
-            "type": "image/png"
-        }
-    ]
 }
