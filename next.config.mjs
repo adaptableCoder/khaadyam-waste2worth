@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
-import nextPWA from 'next-pwa';
-
-const { withPWA } = nextPWA;
+const withPWA = require('next-pwa')();
 
 const nextConfig = withPWA({
     eslint: {
