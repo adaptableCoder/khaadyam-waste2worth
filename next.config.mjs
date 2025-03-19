@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-const withPWA = require('next-pwa')();
+import withPWA from 'next-pwa';
 
+/** @type {import('next').NextConfig} */
 const nextConfig = withPWA({
     eslint: {
         ignoreDuringbuilds: true,
@@ -9,8 +9,7 @@ const nextConfig = withPWA({
         dest: 'public',
         register: true,
         skipWaiting: true,
-        // disable: process.env.NODE.env === 'development' // disable PWA in development mode
-    }
+    },
 });
 
 export default nextConfig;
