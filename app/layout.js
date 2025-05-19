@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from 'next/script';
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "खाद्यम् - waste2worth",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <div className="w-screen flex flex-col justify-center items-center">
           {children}
         </div>
+        <Analytics />
         <Footer/>
         <Script src="https://cdn.lordicon.com/lordicon.js" strategy="lazyOnload" />
       </body>
