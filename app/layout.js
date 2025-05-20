@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <div className="w-screen flex flex-col justify-center items-center">
           {children}
         </div>
-        <Analytics />
+        <Analytics/>
         <Footer/>
         <Script src="https://cdn.lordicon.com/lordicon.js" strategy="lazyOnload" />
       </body>
