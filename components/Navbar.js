@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="h-[100%] w-[100%] md:w-[50%] py-2 px-5 flex flex-row justify-center items-center">
           <div className="left w-[10%] h-[100%] text-transparent block md:hidden"></div>
           <div className="logo w-[100%] md:w-[80%] h-[100%] flex justify-center items-center">
-            <Image src="/logo.png" alt="logo" className="h-[150%] w-auto"/>
+            <Image src="/logo.png" alt="logo" width={60} height={60} className="h-[150%] w-auto"/>
             <div className="flex flex-col justify-center items-center">
               <p className="!md:text-5xl !text-2xl kalam">खाद्यम्</p>
               <p className="!md:text-xl !text-sm tracking-[0.25rem] md:tracking-[0.55rem] text-me-one">&nbsp;waste 2 worth</p>

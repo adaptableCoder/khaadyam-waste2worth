@@ -70,7 +70,7 @@ export default function Home() {
     <> 
       <div className="banner w-[100%] h-[100vh] bg-cover bg-center bg-[url('./banner.jpg')]" id="home">
         <div className="overlay h-[100%] w-[100%] bg-black/40 flex flex-col justify-center items-center">
-          <Image src="/veggie.gif" alt="veggie" className="h-[20%] lg:h-[40%] w-auto max-w-[40%]"/>
+          <Image src="/veggie.gif" alt="veggie" width={80} height={80} className="h-[20%] lg:h-[40%] w-auto max-w-[40%]"/>
           <div className="md:h-[10%] lg:h-[15%] w-[85%] flex justify-center items-end" key={WordIndex}>
             <TypewriterEffect 
               words={[words[WordIndex]]}
